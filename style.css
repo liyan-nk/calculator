@@ -1,0 +1,119 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+}
+
+.calculator h2 {
+  text-align: center;
+}
+
+.calculator .screen {
+  background-color: #f7f7f7;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 20px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.calculator .button {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #e5e5e5;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculator .button:hover {
+  background-color: #d0d0d0;
+}
+
+.calculator .button:active {
+  background-color: #bbbbbb;
+}
+
+.calculator .button.operator {
+  background-color: #ffa500;
+  color: #ffffff;
+}
+
+.calculator .button.operator:hover {
+  background-color: #e59400;
+}
+
+.calculator .button.operator:active {
+  background-color: #cc8400;
+}
+
+.equals-button {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.equals-button .button {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #ffa500;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.equals-button .button:hover {
+  background-color: #e59400;
+}
+
+.equals-button .button:active {
+  background-color: #cc8400;
+}
+
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+  .calculator {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .calculator .buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .button {
+    font-size: 18px;
+    height: 50px;
+  }
+
+  .equals-button {
+    grid-column: span 3;
+  }
+}
